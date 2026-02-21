@@ -20,6 +20,8 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci --legacy-peer-deps
+        env:
+          NPM_CONFIG_LEGACY_PEER_DEPS: true
       - run: npm run build
 
       - uses: actions/configure-pages@v5
